@@ -1,0 +1,15 @@
+:root{--bg:#f6f7fb;--card:#fff;--accent:#6d28d9}
+body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg)}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:linear-gradient(90deg,#fff,#f8f8ff);box-shadow:0 1px 3px rgba(0,0,0,0.06)}
+.topbar h1{margin:0}
+.role-switch button{margin-left:8px;padding:6px 10px;border-radius:6px;border:1px solid #ddd;background:#fff;cursor:pointer}
+.role-switch .active{background:var(--accent);color:#fff;border-color:transparent}
+.main{padding:16px}
+.grid{display:grid;gap:12px}
+.card{background:var(--card);padding:12px;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.03)}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.product{padding:10px;border-radius:8px;border:1px solid #eee;cursor:pointer}
+.cart{min-height:200px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid #eee;padding:8px;text-align:left}
+.controls{display:flex;gap:8px;margin-bottom:12px}

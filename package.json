@@ -1,7 +1,7 @@
 {
-  "name": "liquor-pos",
+  "name": "liquor-pos-complete",
   "version": "1.0.0",
-  "description": "Liquor Store POS System (Electron + Vite + React)",
+  "description": "Complete Liquor POS (Electron + Vite + React) - IndexedDB offline",
   "author": "Hunt-2059",
   "license": "MIT",
   "main": "main.js",
@@ -12,8 +12,10 @@
     "dist": "electron-builder"
   },
   "dependencies": {
+    "dexie": "^3.2.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "recharts": "^2.10.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.0",
