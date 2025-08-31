@@ -2,25 +2,24 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
-// Vite configuration for Electron renderer process
 export default defineConfig({
   plugins: [react()],
-  root: path.resolve(__dirname, 'src/renderer'), // tell Vite where renderer lives
-  base: './', // ensures relative paths (fixes blank screen in production)
+  root: path.resolve(__dirname, 'src'), // root is just /src now
+  base: './', // important for Electron packaged app
   build: {
-    outDir: path.resolve(__dirname, 'dist/renderer'), // output folder for renderer build
+    outDir: path.resolve(__dirname, 'dist'), // build output
     emptyOutDir: true,
     rollupOptions: {
-      input: path.resolve(__dirname, 'src/renderer/index.html'), // entry point
+      input: path.resolve(__dirname, 'src/index.html'), // entry HTML
     },
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src/renderer'), // allows @/ imports
+      '@': path.resolve(__dirname, 'src'), // so you can use @/components/...
     },
   },
   server: {
-    port: 5173, // dev server port
-    strictPort: true, // fail if port is busy (helps Electron dev mode)
+    port: 5173,
+    strictPort: true,
   },
 })
